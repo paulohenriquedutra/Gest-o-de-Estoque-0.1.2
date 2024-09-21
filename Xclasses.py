@@ -218,10 +218,10 @@ class Funcoes:
                     self.conexao.commit()
                     print('\nUsuário cadastrado com sucesso!\n')
                 else:
-                    print("Usuário já existe. pressione'")
+                    print("\033[31m\nUsuário já existe.")
                     repeticao = 1
             else:
-                print('\nerro\n\nverifique se seu cpf está correto')
+                print('\n\033[31mERRO! verifique se seu cpf está correto')
                 repeticao = 1
             loop = input('\033[36m\nPressione a tecla "s" para tentar novamente ou "n" para voltar ao inicio:  ').upper()
             if loop == 'N':
@@ -245,14 +245,14 @@ class Funcoes:
                 if senha_login == resultado[0]:
                     return 1, cpf_formatado, resultado[1]
                 else:
-                    print('Credenciais inválidas')
+                    print('\033[31m\nCredenciais inválidas')
                     loop = input('\033[36m\nPressione a tecla "s" para tentar novamente ou "n" para voltar ao inicio:  ').upper()
                     if loop == 'N':
                         return 0
                     else:
                         repeticao = 1
             else:
-                print('Credenciais inválidas.')
+                print('\033[31m\nCredenciais inválidas.')
                 loop = input('\033[36m\nPressione a tecla "s" para tentar novamente ou "n" para voltar ao inicio:  ').upper()
                 if loop == 'N':
                     return 0
@@ -281,4 +281,4 @@ class Funcoes:
                 print("\nSaindo do sistema...")
                 return 0, 0
             else:
-                print("Opção inválida. Tente novamente.")
+                input("\n\033[31mOpção inválida. Digite 'enter' para Tente novamente.")

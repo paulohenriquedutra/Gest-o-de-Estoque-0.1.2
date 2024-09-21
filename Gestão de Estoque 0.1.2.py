@@ -2,7 +2,6 @@
 
 #Bibliotecas
 
-import pymysql
 from Xclasses import Funcoes
 
 #Conectando com o Banco de dados
